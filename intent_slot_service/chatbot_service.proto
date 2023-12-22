@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package chatbot.v1;
+
+
+service ChatService {
+    rpc AnswerGenerate (QuestionRequest) returns (AnswerResponse){
+    }
+}
+
+message QuestionRequest{
+    string message = 1;
+}
+
+message AnswerResponse{
+    string message = 1;
+}
